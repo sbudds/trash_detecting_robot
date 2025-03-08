@@ -29,25 +29,6 @@ This program performs real-time ocean trash detection using a pre-trained YOLOv5
 
 3. Ensure you have a compatible camera connected to your system. The program uses camera index 1 by default.
 
-## Usage
-1. Run the program:
-   ```bash
-   python ocean_trash_detection.py
-   ```
-
-2. The program will display the camera feed with bounding boxes around detected ocean trash (green boxes) and high-contrast regions (red boxes).
-
-3. Press `q` to quit the program.
-
-## Configuration
-- **Device selection**: The program will automatically select the device for model processing. It will use MPS if available, otherwise, it will fall back to CPU.
-- **Confidence threshold**: The program uses a threshold of `0.3` to filter weak detections. You can adjust the `CONF_THRESHOLD` value in the code.
-- **High contrast detection**: The program detects high-contrast regions using an RGB difference threshold (`HIGH_CONTRAST_THRESHOLD`), which can be adjusted for stricter or more lenient contrast detection.
-
-## Troubleshooting
-- **Camera not detected**: Ensure the camera is connected correctly and check the camera index in the code if necessary (currently set to index 1).
-- **Low frame rate**: Reduce the input resolution or use a faster model for real-time performance.
-
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
